@@ -2,13 +2,13 @@
 <head>
     <title>Grafik Stok</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/csslist.css">
+    <link rel="stylesheet" href="assets/css/csslist.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <?php
-        require '../config/dbloader.php';
+        require 'config/dbloader.php';
         $products = $productManager->loadProducts();
         $stats = $productManager->getProductStats();
         
@@ -25,7 +25,7 @@
         }
         ?>
         <h1>Dashboard Produk</h1>
-        <a href="../index.php/list" class="btn btn-primary mb-3">Kembali ke Daftar</a>
+        <a href="list" class="btn btn-primary mb-3">Kembali ke Daftar</a>
         
         <!-- Statistics Summary -->
         <div class="row mb-4">
@@ -96,7 +96,7 @@
         <div class="spinner"></div>
     </div>
 
-    <script src="../assets/js/scriptchart.js"></script>
+    <script src="assets/js/scriptchart.js"></script>
     <script>
         // Show loading initially
         showChartLoading();

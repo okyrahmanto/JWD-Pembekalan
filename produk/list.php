@@ -2,12 +2,12 @@
 <head>
     <title>Produk List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/csslist.css">
+    <link rel="stylesheet" href="assets/css/csslist.css">
 </head>
 <body>
     <div class="container">
         <?php
-            require '../config/dbloader.php';
+            require 'config/dbloader.php';
             $products = $productManager->loadProducts();
             $stats = $productManager->getProductStats();
         ?>
@@ -50,7 +50,7 @@
         </div>
         
         <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#createModal">Tambah</button>
-        <a href="../index.php/chart" class="btn btn-success btn-sm">Grafik</a>
+        <a href="chart" class="btn btn-success btn-sm">Grafik</a>
         
         <table class="table table-striped">
             <tr>
@@ -89,7 +89,7 @@
     <!-- Modal Tambah -->
     <div class="modal fade" id="createModal" tabindex="-1">
         <div class="modal-dialog">
-            <form class="modal-content" method="post" action="../index.php/add">
+            <form class="modal-content" method="post" action="add">
                 <div class="modal-header"><h5 class="modal-title">Form Create Produk</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
@@ -114,7 +114,7 @@
     <!-- Modal Edit -->
     <div class="modal fade" id="updateModal" tabindex="-1">
         <div class="modal-dialog">
-            <form class="modal-content" method="post" action="../index.php/update">
+            <form class="modal-content" method="post" action="update">
                 <div class="modal-header"><h5 class="modal-title">Edit Produk</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <script src="../assets/js/scriptlist.js"></script>
+    <script src="assets/js/scriptlist.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body> 
